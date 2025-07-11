@@ -1,0 +1,76 @@
+1. git init
+digunakan untuk melakukan inisialisasi git repository
+working directory -> git working directory
+
+2. git remote <command> <...argument>
+-> perintah untuk registrasi remote repository (command: add)
+-> git remote add <aliasRemote> <urlRemote>
+-> melihat list remote
+-> git remote
+-> mengambil link/url dari remote repository (command: get-url)
+-> git remote get-url <aliasRemote>
+-> melakukan perubahan link/url (command: set-url)
+-> git remote set-url <aliasRemote> <urlBaru>
+
+3. git add <...directory>
+-> melakukan penyimpanan sementara dari working directory ke staging area
+
+4. git commit <options> <argument>
+-> penyimpanan permanen dari staging area ke local repository
+-> menggunakan pesan singkat (options: m)
+-> git commit -m "pesan commit"
+-> menggunakan pesan panjang (no options)
+-> git commit
+format commit (convention)
+<type>[optional scope]: <description>
+[optional body]
+[optional footer(s)]
+
+5. git push <options> <aliasRemote> <branch>
+-> normal (no options)
+-> git push origin master
+-> mau ditambah dengan penyimpanan opsi remote dan branch (options: u)
+-> git push -u origin master
+
+6. git pull <aliasRemote> <branch>
+-> kalau sudah ada -u
+-> git pull
+-> kalau belum ada -u
+-> git pull origin master
+
+7. git revert <commit-id>
+-> git revert <relative-position>
+
+8. git reset <commit-id>
+-> git reset <relative-position>
+
+9. git branch <options> <...argument>
+-> melihat cabang
+-> git branch
+-> membuat cabang
+-> git branch <branchname>
+-> menghapus cabang (options: d)
+-> git branch -d <branchname>
+-> mengubah cabang (options: m)
+-> git branch -m <old> <new>
+
+10. git checkout <options> <argument>
+-> berpindah cabang
+-> git checkout <branchname>
+-> berpindah cabang ke yang tidak ada (options: -b)
+-> git checkout -b <branchname>
+
+11. git merge <argument>
+-> menggabungkan branch
+-> git merge <...branchname>
+
+12. git clone <urlRepo>
+
+status file di git di dalam vscode
+1. U => untracked
+file ada di direktori namun belum tersimpan di dalam histori git
+2. A => index added
+suatu file ditambahkan ke dalam staging area (belum tersimpan di repository)
+3. <no status> => sudah ditambahkan/tersimpan di dalam git repository
+4. M => modified
+suatu file yang sudah terdaftar di repository mengalami perubahan
